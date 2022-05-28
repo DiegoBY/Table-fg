@@ -1,0 +1,142 @@
+/* === Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* === Reset Básico === */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* === Variáveis CSS === */
+:root {
+
+    /* --- Variáveis do table --> tbody --> tr --> td --- */
+    --tbody-td-fontsize: 16px;
+    --tbody-td-fontweight: 600;
+    --tbody-td-textshadow: #000 0.2em 0.2em 0.2em;
+    --tbody-td-textalign: center;
+    --tbody-td-letterspacing: 1px;
+    --tbody-td-color: #fff;
+    --tbody-td-padding: 20px;
+    --tbody-td-border: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+/* === Body === */
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    /* background-image: url('../images/bg-logo-three.jpg');
+    background-position: center;
+    background-size: cover; */
+    position: relative;
+}
+
+body .img {
+    background-image: url('../images/bg-white.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -2;  
+    filter: grayscale(1) url('#gold-sunset') contrast(0.4) blur(0.5px);
+}
+
+/* === Table === */
+table {
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    border-collapse: collapse;
+}
+
+/* === Table Thead === */
+table thead tr {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+table thead tr th {
+    color: #fff;
+    padding: 20px 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+table thead tr #center {
+    padding-left: 25px;
+}
+
+
+/* === Table Tbody === */
+table tbody tr td {
+    font-size: var(--tbody-td-fontsize);
+    font-weight: var(--tbody-td-fontweight);
+    text-shadow: var(--tbody-td-textshadow);
+    text-align: var(--tbody-td-textalign);
+    letter-spacing: var(--tbody-td-letterspacing);
+    color: var(--tbody-td-color);
+    padding-left: var(--tbody-td-padding);
+    border: var(--tbody-td-border);
+    width: 100vw;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: rgba(135, 135, 135, .4);
+}
+
+/* ------------- EFEITO HOVER -------------------- */
+/* --- Efeito na Linha --- */
+table tbody tr {
+    position: relative;
+}
+
+table tbody tr:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-color: transparent;
+    transition: all 0.5s ease-in;
+}
+
+table tbody tr:hover:after {
+    /* left: 0; */
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* --- Efeito na Parte Vermelha da tabela --- */
+/* table thead tr {
+    position: relative;
+}
+
+table thead tr:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: transparent;
+    transition: all 0.8s ease-in;
+}
+
+table thead tr:hover:after {
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.6);
+} */
+
+
+/* HELLO =) */
